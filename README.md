@@ -4,7 +4,7 @@ A private Twitter newsfeed streaming server. Great for news you love.
 ![Image of twitter-stream](https://github.com/jamesmawm/twitter-stream/blob/master/screenshots/screenshot02.png)
 
 # Requirements
-- NodeJS or npm
+- [npm](https://www.npmjs.com/)
 
 # Installing Dependencies
 - From the root directory (where `package.json` is) run `npm install`. This will install all required `node` modules.
