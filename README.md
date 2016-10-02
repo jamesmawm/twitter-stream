@@ -1,6 +1,8 @@
 # twitter-stream
 A private Twitter newsfeed streaming server. Great for news you love.
 
+![Image of twitter-stream](https://github.com/jamesmawm/twitter-stream/blob/master/screenshots/screenshot02.png)
+
 # Requirements
 - NodeJS or npm
 
