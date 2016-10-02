@@ -22,3 +22,6 @@ Before starting the server, remember to edit your `dashboard.js` file and note t
 Tip
 - Click on a news row to 'lock' and display on the top panel.
 - Nothing is streaming? Check your Twitter credentials again.
+
+Disclaimer:
+- This is a fork of [https://github.com/itwars/twitter-stream](https://github.com/itwars/twitter-stream)
