@@ -1,0 +1,23 @@
+{
+  "name": "twitter-stream",
+  "version": "0.0.0",
+  "description": "A private Twitter newsfeed streaming server. Great for news you love.",
+  "keywords": [
+    "twitter",
+    "slack",
+    "streaming",
+    "rt"
+  ],
+  "author": {
+    "name": "James Ma"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jamesmawm/twitter-stream.git"
+  },
+  "dependencies": {
+    "socket.io": "0.9.16",
+    "twit": "2.2.4",
+    "express": "4.0.0"
+  }
+}
