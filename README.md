@@ -10,7 +10,7 @@ A private Twitter newsfeed streaming server. Great for news you love.
 - From the root directory (where `package.json` is) run `npm install`. This will install all required `node` modules.
 
 # Configuration
-Before starting the server, remember to edit your `dashboard.js` file and note the following variables:
+Before starting the server, copy the `.env.example` file to `.env` and note the following variables:
 - Your Twitter credentials (consumer key, access token and secret keys) *This step is important!!!*
 - Host and port configuration
 - Specify the words that you want to track in the `track_list` variable of `dashboard.js`.

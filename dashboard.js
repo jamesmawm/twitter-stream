@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+require('dotenv').config();
+
 var Express = require('express');
 var Http = require('http');
 var Twitter = require('twit');
@@ -14,30 +16,31 @@ app.get('/', function(req, res, next){
 });
 
 var server = Http.createServer(app);
-var port = 8081;
-server.listen(port);
-console.log("Running on http://localhost:" + port);
+server.listen(process.env.LISTEN_PORT, process.env.LISTEN_HOST);
+console.log("Running on http://" + process.env.LISTEN_HOST + ":" + process.env.LISTEN_PORT);
 
 var io  = SocketIO.listen(server);
 io.set('log level', 0);
 
 var twit = new Twitter({
-    consumer_key:  'aaa',
-    consumer_secret: 'bbb',
-    access_token: 'ccc',
-    access_token_secret: 'ddd',
+    consumer_key:  process.env.TWITTER_CONSUMER_KEY,
+    consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
+    access_token: process.env.TWITTER_ACCESS_TOKEN,
+    access_token_secret: process.env.TWITTER_ACCESS_SECRET
 });
 
-var track_list = ['financial', 'markets', 'Singapore'];
-var stream = twit.stream('statuses/filter', { track: track_list});
+var track_list = process.env.TRACK_LIST.split(',').map(function (word) {
+    return word.trim();
+});
+var stream = twit.stream('statuses/filter', { track: track_list });
 
 io.sockets.on('connection', function(socket){
     console.log('io.sockets.on connection');
 
-    socket.on('data', function(action,data){       
+    socket.on('data', function(action,data){
         if(action==='*') {
             twit.updateStatus(data, function (err, data){
-		
+
             });
         }
     });

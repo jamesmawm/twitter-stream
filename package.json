@@ -16,8 +16,9 @@
     "url": "https://github.com/jamesmawm/twitter-stream.git"
   },
   "dependencies": {
+    "dotenv": "^2.0.0",
+    "express": "4.0.0",
     "socket.io": "0.9.16",
-    "twit": "2.2.4",
-    "express": "4.0.0"
+    "twit": "2.2.4"
   }
 }
