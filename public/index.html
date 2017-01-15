@@ -1,71 +1,67 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<meta name="HandheldFriendly" content="True">
-<meta name="MobileOptimized" content="320">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<title>Twitter Real-time News</title>
-<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-<style>
-body{padding-top:20px;}
-.dashboard-github{width:320px;height: 53px;margin-right:-15px;margin-left:-10px;}
-</style>
+	<meta charset="utf-8">
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>Twitter Real-time News</title>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	<style>
+		body {
+			padding-top: 20px;
+		}
+	</style>
 </head>
 <body>
 <nav class="navbar navbar-default navbar-fixed-top hide" role="navigation">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#"><span class="icon-vincent font14"></span></a>
-    </div>
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <!--NAVBAR-->
-      <!--<ul class="nav navbar-nav" >-->
-        <!--<li><a href="/" target="_blank">Home</a></li>-->
-      <!--</ul>-->
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-  </nav>
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">
+				<span class="icon-vincent font14"></span>
+			</a>
+		</div>
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<!--NAVBAR-->
+			<!--<ul class="nav navbar-nav" >-->
+			<!--<li><a href="/" target="_blank">Home</a></li>-->
+			<!--</ul>-->
+		</div><!-- /.navbar-collapse -->
+	</div><!-- /.container-fluid -->
+</nav>
 <div class="container-fluid">
-   <div class="row">
-       <div class="col-md-12 col-lg-9">
-        <div class="well" id="snapbox_box">
-        </div>
-         <div class="well">
-                <div id="twitter-stream">
-            	  <ul class="unstyled"></ul>
-                </div>
-         </div>
-      </div>
-
-      <div class="col-lg-3">
-         <div class="well" id="tracker">
-                <!--<form class="well" id="chat" >-->
-                    <!--<label>Twitter filter</label>-->
-                    <!--<input type="text" id="data" placeholder="Add a Twitter tracker…">-->
-                    <!--<button type="submit" class="btn" onclick="addTrack(); return false;" >Submit</button>-->
-                <!--</form>-->
-                <!--<div class="well">-->
-                    <!--<p>Twitter stream tracker(s):</p>-->
-                    <!--<div id="tracker">-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<form class="well" id="twitter" >-->
-                    <!--<label>Tweet</label>-->
-                    <!--<input type="text" id="tweet" placeholder="New Tweet…">-->
-                    <!--<button type="submit" class="btn" onclick="tweetThat(); return false;" >Submit</button>-->
-                    <!--<p id="text_counter"></p>-->
-                <!--</form>-->
-         </div>
-      </div>
-
-   </div>
+	<div class="row">
+		<div class="col-md-12 col-lg-9">
+			<div class="well" id="snapbox_box">
+			</div>
+			<div class="well">
+				<div id="twitter-stream">
+					<ul class="unstyled"></ul>
+				</div>
+			</div>
+		</div>
+		
+		<div class="col-lg-3">
+			<div class="well" id="tracker">
+			</div>
+			
+			<form class="well" id="add_tracker">
+				<label>Track:</label>
+				<input type="text" id="input_tracker" placeholder="Keyword..">
+				<button type="submit" class="btn btn-sm btn-primary" onclick="addKeyword(); return false;">Submit
+				</button>
+			</form>
+		
+		</div>
+	
+	</div>
 </div>
 <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
